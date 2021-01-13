@@ -18,6 +18,13 @@ const NavBar = ({ user, handleLogout }) => {
                   <Link to='/patrick' className='nav-link'>
                     Patrick
                   </Link>
+                  
+                </li>
+                <li>
+                  <Link to='/sophia' className='nav-link'>
+                    Sophia
+                  </Link>
+                  
                 </li>
                 <li>
                   <Link to='/' className='nav-link'>
@@ -48,6 +55,12 @@ const NavBar = ({ user, handleLogout }) => {
                   <Link to='/patrick' className='nav-link'>
                     Patrick
                   </Link>
+                </li>
+                <li>
+                  <Link to='/sophia' className='nav-link'>
+                    Sophia
+                  </Link>
+                  
                 </li>
                 <li>
                   <Link to='/' className='nav-link'>
