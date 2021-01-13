@@ -8,7 +8,7 @@ import Users from '../Users/Users'
 import "./App.css";
 import Patrick from '../Patrick/Patrick'
 import Sophia from '../Sophia/Sophia'
-
+import Brittany from '../Brittany/Brittany'
 
 class App extends Component {
   state = {
@@ -42,6 +42,30 @@ class App extends Component {
         attributes: ['tasty, ', 'boozy, ', 'fun']
       }
     ],
+    brittanyThings:[
+      { 
+        name: 'banana',
+        image: 'https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        attributes: ['potassium-rich', 'yellow when good', 'not a taco', 'ring ring ring ring ring ring ring']
+      },
+      {
+        name: 'turkey',
+        image: 'https://images.unsplash.com/photo-1560011961-4ab41261de01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+        attributes: ['such gobbles', 'good when stuffed', 'not a taco', 'why gravy exists']
+      },
+      {
+        name: 'taco',
+        image: 'https://images.unsplash.com/photo-1545093149-618ce3bcf49d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80',
+        attributes: ['yummy in my tummy', 'salsas may vary', 'definitely a taco', 'very edible']
+      },
+      {
+        name: 'linux',
+        image: 'https://i.imgur.com/3BmfSOA.png',
+        attributes: ["not a taco", "not Windows", "not macOS", "Penguins?"] 
+      },
+
+    ],
+
   };
 
   handleLogout = () => {
@@ -82,7 +106,13 @@ class App extends Component {
                 </div>
                  ))}
 
-                 
+              {this.state.brittanyThings.map((thing) => (
+                <div>
+                  {thing.name}
+                  <img src={thing.image} alt='' height='50' width='50' />
+                  {thing.attributes}
+                </div>
+                 ))}
             </main>
         
           
@@ -123,8 +153,14 @@ class App extends Component {
          <Sophia 
            sophiasThings={this.state.sophiasThings}
          />
+
        )}
        />
+        <Route
+          exact
+          path='/brittany'
+          render={() => <Brittany brittanyThings={this.state.brittanyThings} />}
+        />
        </>
     );
   }

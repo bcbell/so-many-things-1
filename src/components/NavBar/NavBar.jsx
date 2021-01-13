@@ -27,6 +27,15 @@ const NavBar = ({ user, handleLogout }) => {
                   
                 </li>
                 <li>
+                <Link
+                  to={{
+                    pathname: "/brittany",
+                  }}
+                >
+                  Brittany
+                </Link>
+              </li>
+                <li>
                   <Link to='/' className='nav-link'>
                     Home
                   </Link>
@@ -62,6 +71,15 @@ const NavBar = ({ user, handleLogout }) => {
                   </Link>
                   
                 </li>
+                <li>
+                <Link
+                  to={{
+                    pathname: "/brittany",
+                  }}
+                >
+                  Brittany
+                </Link>
+              </li>
                 <li>
                   <Link to='/' className='nav-link'>
                     Home
