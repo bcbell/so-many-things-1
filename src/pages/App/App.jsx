@@ -65,14 +65,24 @@ class App extends Component {
           render={() => (
 
             <main>
-              <h1>Welcome. This is an authorization template.</h1>
+              <h1>Welcome. These are all our things!</h1>
               {this.state.patricksThings.map((thing) => (
                 <div>
                   {thing.name}
                   <img src={thing.image} alt='' height='50' width='50' />
                   {thing.attributes}
                 </div>
-              ))}
+                 ))}
+
+                {this.state.sophiasThings.map((thing) => (
+                <div>
+                  {thing.name}
+                  <img src={thing.image} alt='' height='50' width='50' />
+                  {thing.attributes}
+                </div>
+                 ))}
+
+                 
             </main>
         
           
